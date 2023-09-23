@@ -1,0 +1,18 @@
+.section {
+  aspect-ratio: 4 / 3;
+}
+
+/* Media Queries */
+@media (min-width: 1020px) {
+  .section {
+    aspect-ratio: 5 / 3;
+
+    background-attachment: fixed;
+  }
+}
+
+@media (min-width: 1320px) {
+  .section {
+    aspect-ratio: 7 / 3;
+  }
+}
