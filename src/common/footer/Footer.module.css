@@ -1,0 +1,138 @@
+.footer {
+  padding: 2rem 1rem;
+
+  text-align: center;
+
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.footer > h4 {
+  margin-bottom: 0.5rem;
+
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.newsletterForm {
+  max-width: 40rem;
+  margin: 1rem auto;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.newsletterForm > div {
+  margin-bottom: 1.5rem;
+
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.newsletterForm label {
+  display: block;
+
+  font-weight: 300;
+  text-align: initial;
+}
+
+.newsletterForm label::after {
+  content: " *";
+}
+
+.newsletterForm input {
+  width: 100%;
+  padding: 0.5rem;
+
+  font-weight: 200;
+
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px #ffffff solid;
+  outline: none;
+
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.newsletterForm > button {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+
+  border: 1px solid #ffffff;
+
+  color: #000000;
+  background-color: #ffffff;
+
+  cursor: pointer;
+
+  -webkit-transition: background-color 0.4s ease, color 0.4s ease;
+  -o-transition: background-color 0.4s ease, color 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.newsletterForm > button:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.listTitle {
+  font-weight: 300;
+}
+
+.socialsList {
+  margin: 0.5rem 0 1rem 0;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.socialsList > li {
+  margin-right: 0.5rem;
+}
+
+.socialsList img {
+  width: 2.5rem;
+}
+
+.copyright {
+  font-weight: 300;
+}
+
+@media (min-width: 720px) {
+  .footer {
+    padding: 4rem 1rem 2rem 1rem;
+  }
+
+  .footer > h4 {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .newsletterForm {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 1020px) {
+  .footer > h4 {
+    font-size: 1.5rem;
+  }
+
+  .newsletterForm {
+    margin-bottom: 4rem;
+  }
+}
