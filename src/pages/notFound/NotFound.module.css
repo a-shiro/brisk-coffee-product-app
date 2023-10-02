@@ -1,0 +1,59 @@
+.section {
+  padding: 5rem 0;
+
+  text-align: center;
+}
+
+.section > h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.section > p {
+  max-width: 30ch;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.section > button {
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+
+  border: none;
+
+  font-size: 1rem;
+
+  color: #ffffff;
+  background-color: #000000;
+
+  cursor: pointer;
+
+  -webkit-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+.section > button:hover {
+  background-color: #666058;
+}
+
+/* Media Queries */
+@media (min-width: 1020px) {
+  .section {
+    padding: 10rem 0;
+  }
+
+  .section > h1 {
+    font-size: 5rem;
+  }
+
+  .section > p {
+    font-size: 1.25rem;
+
+    margin-bottom: 3.5rem;
+  }
+
+  .section > button {
+    font-size: 1.15rem;
+  }
+}
