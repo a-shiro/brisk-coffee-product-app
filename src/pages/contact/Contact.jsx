@@ -5,8 +5,12 @@ import styles from "./Contact.module.css";
 // Static Files
 import servingAtCounterImage from "../../resources/images/serving_at_counter.webp";
 import MessageForm from "./components/form/Form";
+import { useState } from "react";
+import Modal from "./components/modal/Modal";
 
 function Contact() {
+  const [modalVisible, setModalVisible] = useState(false);
+
   return (
     <section className={styles.section}>
       <section className={styles.row}>
@@ -23,7 +27,8 @@ function Contact() {
             </address>
             <p>We want to hear from you</p>
 
-            <MessageForm />
+            <MessageForm setModalVisible={setModalVisible} />
+            {modalVisible && <Modal setModalVisible={setModalVisible} />}
           </div>
         </div>
 

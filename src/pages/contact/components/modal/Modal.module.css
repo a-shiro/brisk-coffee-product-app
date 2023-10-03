@@ -1,0 +1,119 @@
+.modalOverlay {
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+
+  background-color: rgba(0, 0, 0, 0.8);
+
+  animation: fade-in 0.4s both ease-out;
+  -webkit-animation: fade-in 0.4s both ease-out;
+}
+
+.modal {
+  width: 95%;
+  max-width: 35rem;
+  padding: 4rem 0.5rem;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  text-align: center;
+
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+
+  background-color: white;
+
+  animation: drop-in 0.4s both ease-out;
+  -webkit-animation: drop-in 0.4s both ease-out;
+}
+
+.tick {
+  max-width: 7.5rem;
+  margin: auto;
+}
+
+.modal > h1 {
+  margin-top: 1rem;
+
+  font-size: 1.25rem;
+  font-weight: 500;
+
+  color: #000000;
+}
+
+.modal > p {
+  margin: 0.5rem 0 2rem 0;
+
+  font-size: 0.9rem;
+  font-weight: 300;
+
+  color: gray;
+}
+
+.modal > button {
+  padding: 0.5rem 2rem;
+
+  font-size: 1rem;
+
+  border: none;
+
+  background-color: #000000;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  -webkit-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+.modal > button:hover {
+  background-color: #666058;
+}
+
+/* Animations */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes drop-in {
+  0% {
+    top: 40%;
+    opacity: 0;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes drop-in {
+  0% {
+    top: 40%;
+    opacity: 0;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
+}
