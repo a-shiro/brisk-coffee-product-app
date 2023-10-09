@@ -17,10 +17,12 @@ function Store() {
         <MenuSection
           product="Coffee"
           description="Experience Brisk Coffee's signature heartwarming drinks."
+          collectionName="coffeeProducts"
         />
         <MenuSection
           product="Other"
           description="Other products by Brisk Coffee or partner companies"
+          collectionName="otherProducts"
         />
       </section>
     </>

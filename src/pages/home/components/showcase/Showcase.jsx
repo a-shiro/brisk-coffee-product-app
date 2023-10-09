@@ -1,24 +1,40 @@
+// Hooks
+import { useEffect, useState } from "react";
 // Components
 import { Link } from "react-router-dom";
 import Card from "./components/Card";
 // CSS
 import styles from "./Showcase.module.css";
-// Temp files
-import image_1 from "./temp/can_vanilla.webp";
-import image_2 from "./temp/can_nitro.webp";
-import image_3 from "./temp/can_black.webp";
+// Data
+import { fetchDocs } from "../../../../services/queries";
 
 function Showcase() {
-  // ToDo: Insert API call for cards data
+  const [products, setProducts] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetchDocs("coffeeProducts");
+
+      setProducts(data);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <section className={styles.section}>
       <h2 className={styles.title}>Triple Can Treat</h2>
 
       <div className={styles.cards}>
-        <Card image={image_1} title="Vanilla" />
-        <Card image={image_2} title="Nitro" />
-        <Card image={image_3} title="Black" />
+        {products?.map((product) => {
+          return (
+            <Card
+              flavour={product.flavour}
+              showcaseImage={product.showcaseImageUrl}
+              key={product.id}
+            />
+          );
+        })}
       </div>
 
       <Link className={styles.orderBtn} to="/order-online">

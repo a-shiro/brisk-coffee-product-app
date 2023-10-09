@@ -1,10 +1,24 @@
+// Hooks
+import { useEffect, useState } from "react";
 // Components
 import ProductCard from "./components/ProductCard";
 // CSS
 import styles from "./MenuSection.module.css";
+// Data
+import { fetchDocs } from "../../../../services/queries";
 
-function MenuSection({ product, description }) {
-  // ToDo: Insert API call for cards data
+function MenuSection({ product, description, collectionName }) {
+  const [products, setProducts] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetchDocs(collectionName);
+
+      setProducts(data);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <section className={styles.section}>
@@ -14,9 +28,17 @@ function MenuSection({ product, description }) {
       </hgroup>
 
       <div className={styles.cardsContainer}>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        {products?.map((product) => {
+          return (
+            <ProductCard
+              brand={product.brand}
+              flavour={product.flavour}
+              price={product.price}
+              storeImage={product.storeImageUrl}
+              key={product.id}
+            />
+          );
+        })}
       </div>
     </section>
   );

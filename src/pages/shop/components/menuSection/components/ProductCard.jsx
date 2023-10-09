@@ -1,19 +1,17 @@
 // CSS
 import styles from "./ProductCard.module.css";
-// Temporary static files
-import can from "./temp/can_nitro_store.webp";
 
-function ProductCard() {
+function ProductCard({ brand, flavour, price, storeImage }) {
   return (
     <div className={styles.card}>
       <div className={styles.cardInfo}>
-        <h4>Brisk Coffee</h4>
-        <p>Nitro</p>
-        <span>$9.00</span>
+        <h4>{brand}</h4>
+        <p>{flavour}</p>
+        <span>${price.toFixed(2)}</span>
       </div>
 
       <div className={styles.cardImageContainer}>
-        <img src={can} alt="product" />
+        <img src={storeImage} alt="product" />
       </div>
     </div>
   );

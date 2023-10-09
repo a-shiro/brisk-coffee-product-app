@@ -1,11 +1,11 @@
 // CSS
 import styles from "../Showcase.module.css";
 
-function Card({ image, title }) {
+function Card({ showcaseImage, flavour }) {
   return (
     <div className={styles.card}>
-      <img src={image} alt="product" />
-      <h3>{title}</h3>
+      <img src={showcaseImage} alt="product" />
+      <h3>{flavour}</h3>
     </div>
   );
 }
