@@ -13,7 +13,7 @@
 .contactForm input,
 .contactForm textarea {
   min-width: 100%;
-  max-width: 100%;
+  max-width: 0;
   padding: 0.25rem;
   margin-bottom: 0.5rem;
 

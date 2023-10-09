@@ -16,8 +16,6 @@ function MessageForm({ setModalVisible }) {
       ...prev,
       [e.target.id]: e.target.value,
     }));
-
-    console.log(formValues);
   };
 
   const submitHandler = (e) => {
@@ -72,7 +70,7 @@ function MessageForm({ setModalVisible }) {
         value={formValues.message}
         id="message"
         type="textarea"
-        rows={6}
+        rows={10}
         required
       ></textarea>
 
