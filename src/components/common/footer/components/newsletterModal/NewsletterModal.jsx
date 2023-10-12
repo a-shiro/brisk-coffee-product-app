@@ -1,9 +1,9 @@
 // CSS
-import styles from "./Modal.module.css";
+import styles from "./NewsletterModal.module.css";
 // Static files
-import tick from "../../../resources/icons/tick.png";
+import tick from "../../../../../resources/icons/tick.png";
 
-function Modal({ setModalVisible }) {
+function NewsletterModal({ setModalVisible }) {
   const close = () => {
     setModalVisible(false);
   };
@@ -22,4 +22,4 @@ function Modal({ setModalVisible }) {
   );
 }
 
-export default Modal;
+export default NewsletterModal;
