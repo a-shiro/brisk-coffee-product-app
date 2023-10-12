@@ -29,11 +29,11 @@ function Nav() {
   return (
     <nav className={styles.navigation}>
       <Link className={styles.brand} to="/">
-        Brisk Coffee
+        Brisk
       </Link>
 
       <Hamburger onToggle={toggleMenu} easing="ease-in" size={26} />
-      <div ref={overlay} className={styles.overlay}></div>
+      <div onClick={closeMenu} ref={overlay} className={styles.overlay}></div>
 
       <ul ref={list} className={styles.navList}>
         <li>
