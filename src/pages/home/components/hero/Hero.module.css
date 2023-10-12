@@ -1,7 +1,7 @@
 .section {
   width: 100%;
-  min-height: 100vh;
-  padding: 5rem 0.5rem;
+  min-height: 20rem;
+  padding: 3rem 0.5rem;
 
   background: url("/src/resources/images/cans_hero.webp") center / cover
     no-repeat #d8955e;
@@ -64,6 +64,8 @@
 
 @media (min-width: 1020px) {
   .section {
+    min-height: 100vh;
+
     background-attachment: fixed;
   }
 
