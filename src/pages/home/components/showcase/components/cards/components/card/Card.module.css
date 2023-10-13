@@ -1,0 +1,48 @@
+.card {
+  width: 15rem;
+  margin: auto;
+}
+
+.card img {
+  aspect-ratio: 4 / 4;
+  width: 100%;
+
+  background-color: #d68f5a;
+
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(43, 43, 43, 0.15);
+  box-shadow: 0 0.5rem 1rem rgba(43, 43, 43, 0.15);
+
+  -webkit-transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.card img:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.card h3 {
+  margin: 1.5rem 0 2rem 0;
+
+  font-weight: 500;
+  font-size: 1.35rem;
+}
+
+/* Media Queries */
+@media (min-width: 720px) {
+  .card {
+    width: 18rem;
+  }
+
+  .card h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1320px) {
+  .card {
+    width: 20rem;
+  }
+}
