@@ -1,0 +1,53 @@
+.card {
+  width: 15rem;
+  margin: auto;
+}
+
+.card > div {
+  aspect-ratio: 4 / 4;
+  width: 100%;
+
+  background-color: #d68f5a;
+}
+
+.card h3 {
+  width: 8rem;
+  height: 1.5rem;
+  margin: 1.5rem auto 2rem auto;
+
+  background-color: #e5e5e5;
+
+  font-weight: 500;
+  font-size: 1.35rem;
+}
+
+/* Media Queries */
+@media (min-width: 720px) {
+  .card {
+    width: 18rem;
+  }
+}
+
+@media (min-width: 1020px) {
+  .skeleton {
+    max-width: 65rem;
+    margin: auto;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 1320px) {
+  .skeleton {
+    max-width: 75rem;
+  }
+
+  .card {
+    width: 20rem;
+  }
+}
