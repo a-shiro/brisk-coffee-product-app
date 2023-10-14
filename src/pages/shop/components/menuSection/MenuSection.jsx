@@ -1,13 +1,13 @@
 // Hooks
 import { useEffect, useState } from "react";
 // Components
-import ProductCard from "./components/ProductCard";
+import ProductCards from "./components/productCards/ProductCards";
 // CSS
 import styles from "./MenuSection.module.css";
 // Data
 import { fetchDocs } from "../../../../services/queries";
 
-function MenuSection({ product, description, collectionName }) {
+function MenuSection({ sectionTitle, description, collectionName }) {
   const [products, setProducts] = useState();
 
   useEffect(() => {
@@ -23,23 +23,11 @@ function MenuSection({ product, description, collectionName }) {
   return (
     <section className={styles.section}>
       <hgroup className={styles.header}>
-        <h3>{product}</h3>
+        <h3>{sectionTitle}</h3>
         <p>{description}</p>
       </hgroup>
 
-      <div className={styles.cardsContainer}>
-        {products?.map((product) => {
-          return (
-            <ProductCard
-              brand={product.brand}
-              flavour={product.flavour}
-              price={product.price}
-              storeImage={product.storeImageUrl}
-              key={product.id}
-            />
-          );
-        })}
-      </div>
+      <ProductCards products={products} />
     </section>
   );
 }

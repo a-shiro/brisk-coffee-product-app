@@ -15,12 +15,13 @@ function Store() {
         <Nav />
 
         <MenuSection
-          product="Coffee"
+          sectionTitle="Coffee"
           description="Experience Brisk Coffee's signature heartwarming drinks."
           collectionName="coffeeProducts"
         />
+
         <MenuSection
-          product="Other"
+          sectionTitle="Other"
           description="Other products by Brisk Coffee or partner companies"
           collectionName="otherProducts"
         />
