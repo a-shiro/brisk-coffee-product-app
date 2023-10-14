@@ -1,0 +1,80 @@
+.skeleton > div {
+  min-height: 11rem;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
+  border-top: 1px solid #e6e6e6;
+}
+
+.infoSkeleton {
+  padding: 1rem 0 1rem 1.35rem;
+
+  position: relative;
+}
+
+.infoSkeleton > h4 {
+  width: 8rem;
+  height: 1.5rem;
+  margin-bottom: 0.5rem;
+
+  background-color: #e5e5e5;
+}
+
+.infoSkeleton > p {
+  width: 5rem;
+  height: 1rem;
+
+  background-color: #e5e5e5;
+}
+
+.cardSkeleton {
+  width: 8rem;
+  height: 9rem;
+  margin: 1rem;
+
+  background-color: #e5e5e5;
+}
+
+/* Media Queries */
+@media (min-width: 720px) {
+  .skeleton {
+    padding: 0 1rem;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .skeleton > div {
+    width: 49%;
+    margin-bottom: 1rem;
+
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    border: 1px solid #e6e6e6;
+  }
+}
+
+@media (min-width: 1020px) {
+  .cardSkeleton {
+    width: 10rem;
+  }
+}
+
+@media (min-width: 1020px) {
+  .cardSkeleton {
+    height: 10.65rem;
+  }
+}
