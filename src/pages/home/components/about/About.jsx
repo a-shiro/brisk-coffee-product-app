@@ -18,14 +18,13 @@ function About() {
               around the world and craft them into rich, aromatic brews. From
               the first sip to the last drop, our commitment to quality and
               flavor shines through. Join us on a journey through the world of
-              coffee, one cup at a time. Taste the difference with Brisk Coffee
-              today.
+              coffee, one cup at a time. Taste the difference with Brisk today.
             </p>
             <Link to="/about">Read more</Link>
           </div>
         </div>
 
-        <div>
+        <div className={styles.imageContainer}>
           <img className={styles.image} src={drinking} alt="person-drinking" />
         </div>
       </div>
@@ -45,7 +44,7 @@ function About() {
           </div>
         </div>
 
-        <div>
+        <div className={styles.imageContainer}>
           <img className={styles.image} src={display} alt="cups-display" />
         </div>
       </div>
