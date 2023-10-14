@@ -1,6 +1,12 @@
 .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   position: sticky;
@@ -15,6 +21,8 @@
 }
 
 .optionsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 
   font-size: 1.05rem;
@@ -31,6 +39,8 @@
 .cart {
   padding: 0.75rem 1rem;
 
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -38,5 +48,6 @@
   width: 1.1rem;
   margin-right: 0.25rem;
 
+  -o-object-fit: contain;
   object-fit: contain;
 }
