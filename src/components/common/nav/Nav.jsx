@@ -1,5 +1,5 @@
 // Hooks
-import { useRef } from "react";
+import { useRef, useState } from "react";
 // Components
 import { Link } from "react-router-dom";
 import { Squash as Hamburger } from "hamburger-react";
@@ -7,10 +7,13 @@ import { Squash as Hamburger } from "hamburger-react";
 import styles from "./Nav.module.css";
 
 function Nav() {
+  const [hamburgerToggled, sethamburgerToggled] = useState(false);
+
   const list = useRef();
   const overlay = useRef();
 
   const toggleMenu = () => {
+    sethamburgerToggled(!hamburgerToggled);
     list.current.classList.toggle(styles.active);
     overlay.current.classList.toggle(styles.active);
 
@@ -19,6 +22,7 @@ function Nav() {
   };
 
   const closeMenu = () => {
+    sethamburgerToggled(false);
     list.current.classList.remove(styles.active);
     overlay.current.classList.remove(styles.active);
 
@@ -32,7 +36,12 @@ function Nav() {
         Brisk
       </Link>
 
-      <Hamburger onToggle={toggleMenu} easing="ease-in" size={26} />
+      <Hamburger
+        onToggle={toggleMenu}
+        toggled={hamburgerToggled}
+        easing="ease-in"
+        size={26}
+      />
       <div onClick={closeMenu} ref={overlay} className={styles.overlay}></div>
 
       <ul ref={list} className={styles.navList}>
