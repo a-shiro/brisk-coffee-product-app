@@ -1,0 +1,22 @@
+.mapContainer {
+  margin-top: 1rem;
+}
+
+.mapContainer > iframe {
+  aspect-ratio: 4/ 2.5;
+  width: 100%;
+  min-height: 20rem;
+
+  display: block;
+
+  border: none;
+
+  background-color: #e5e5e5;
+}
+
+/* Media queries */
+@media (min-width: 1020px) {
+  .mapContainer {
+    margin-top: 0;
+  }
+}
