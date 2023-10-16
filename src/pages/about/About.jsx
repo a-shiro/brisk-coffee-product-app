@@ -13,24 +13,19 @@ function About() {
             <h2>About Our Company</h2>
 
             <p>
-              <b>Brisk Coffee</b> is a dynamic coffee company with a rich
-              history that spans decades. Since its inception, the company has
-              been a trailblazer in the world of coffee, setting new standards
-              for quality and taste. Founded by a group of coffee enthusiasts in
-              the heart of a small town, Brisk Coffee started as a humble
-              neighborhood cafe in 1985. Over the years, their passion for
-              coffee led them on a remarkable journey of exploration and
-              discovery.
+              <b>Brisk</b> is a dynamic coffee company with a rich history that
+              spans decades. Since its inception, the company has been a
+              trailblazer in the world of coffee, setting new standards for
+              quality and taste. Founded by a group of coffee enthusiasts in the
+              heart of a small town, <b>Brisk</b> started as a humble
+              neighborhood cafe in 1985.
             </p>
             <p>
               Every cup is a journey, and they take pride in their meticulous
               roasting process, ensuring each batch is rich in flavor and aroma.
-              Beyond their dedication to exceptional coffee, Brisk Coffee
+              Beyond their dedication to exceptional coffee, the company
               embraces eco-conscious practices, utilizing eco-friendly packaging
-              and promoting sustainable farming practices. They are more than
-              just a coffee brand; they are a symbol of the modern coffee
-              movement, blending tradition with innovation to bring you the
-              perfect cup of coffee every time.
+              and promoting sustainable farming practices.
             </p>
           </div>
         </div>
@@ -57,12 +52,9 @@ function About() {
               tirelessly working behind the scenes to bring you even more
               exciting products to enhance your coffee experience. Our
               dedication to innovation and quality means that we're constantly
-              exploring new flavors, blends, and brewing methods. Stay tuned for
-              upcoming releases that will expand our product line, catering to
-              diverse tastes and preferences. Stay in the know and never miss
-              out on our latest coffee offerings, promotions, and exclusive
-              updates. Subscribe to our newsletter now for a daily dose of
-              coffee inspiration delivered straight to your inbox.
+              exploring new flavors, blends, and brewing methods. Stay in the
+              know and never miss out on our latest coffee offerings,
+              promotions, and exclusive updates by subscribe to our newsletter.
             </p>
           </div>
         </div>
