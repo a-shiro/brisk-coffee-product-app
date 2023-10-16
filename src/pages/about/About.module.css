@@ -30,6 +30,16 @@
   color: #000000;
 }
 
+.section > section:last-child > .imageContainer > img {
+  background-color: #e5e5e5;
+  aspect-ratio: 4 / 6;
+}
+
+.section > section:first-child > .imageContainer > img {
+  background-color: #e5e5e5;
+  aspect-ratio: 4 / 2.5;
+}
+
 .imageContainer > img {
   width: 100%;
 }
