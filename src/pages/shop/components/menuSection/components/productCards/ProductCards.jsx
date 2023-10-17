@@ -11,15 +11,7 @@ function ProductCards({ products }) {
 
       <div className={styles.cardsContainer}>
         {products?.map((product) => {
-          return (
-            <ProductCard
-              brand={product.brand}
-              flavour={product.flavour}
-              price={product.price}
-              storeImage={product.storeImageUrl}
-              key={product.id}
-            />
-          );
+          return <ProductCard product={product} key={product.id} />;
         })}
       </div>
     </>
