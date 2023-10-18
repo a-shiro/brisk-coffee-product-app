@@ -1,9 +1,15 @@
+// Hooks
+import { useContext } from "react";
 // CSS
 import styles from "./Nav.module.css";
-// Static files
+// Resources
 import cartIcon from "../../../../resources/icons/shopping-cart.png";
+// Context
+import { CartContext } from "../../context/context";
 
 function Nav() {
+  const { cart } = useContext(CartContext);
+
   return (
     <nav className={styles.nav}>
       <ul className={styles.optionsList}>
@@ -13,7 +19,7 @@ function Nav() {
 
       <div className={styles.cart}>
         <img src={cartIcon} alt="cart" />
-        <span>0</span>
+        <span>{cart.quantity}</span>
       </div>
     </nav>
   );

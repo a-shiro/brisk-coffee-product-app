@@ -4,14 +4,21 @@ import { useState } from "react";
 import MenuSection from "./components/menuSection/MenuSection";
 import Nav from "./components/nav/Nav";
 import OrderModal from "./components/orderModal/OrderModal";
+import CartInterface from "./components/cartInterface/CartInterface";
 // CSS
 import styles from "./Store.module.css";
 // Context
-import { OrderModalContext, ProductContext } from "./context/context";
+import {
+  OrderModalContext,
+  ProductContext,
+  CartContext,
+} from "./context/context";
 
 function Store() {
   const [modalVisible, setModalVisible] = useState(false);
   const [activeProduct, setActiveProduct] = useState();
+  const [cart, setCart] = useState({ quantity: 0, subtotal: 0, items: {} });
+  const [cartInterfaceVisible, setCartInterfaceVisible] = useState(false);
 
   return (
     <>
@@ -20,7 +27,9 @@ function Store() {
       </header>
 
       <section className={styles.menu}>
-        <Nav />
+        <CartContext.Provider value={{ cart, setCart }}>
+          <Nav setCartInterfaceVisible={setCartInterfaceVisible} />
+        </CartContext.Provider>
 
         <OrderModalContext.Provider value={setModalVisible}>
           <ProductContext.Provider value={setActiveProduct}>
@@ -38,12 +47,21 @@ function Store() {
         </OrderModalContext.Provider>
       </section>
 
-      {modalVisible && (
-        <OrderModal
-          activeProduct={activeProduct}
-          setModalVisible={setModalVisible}
-        />
-      )}
+      <CartContext.Provider value={{ cart, setCart }}>
+        {modalVisible && (
+          <OrderModal
+            activeProduct={activeProduct}
+            setModalVisible={setModalVisible}
+          />
+        )}
+
+        {cartInterfaceVisible && (
+          <CartInterface
+            cart={cart}
+            setCartInterfaceVisible={setCartInterfaceVisible}
+          />
+        )}
+      </CartContext.Provider>
     </>
   );
 }
