@@ -3,23 +3,19 @@ import { useContext } from "react";
 // CSS
 import styles from "./ProductCard.module.css";
 // Context
-import {
-  OrderModalContext,
-  ProductContext,
-} from "../../../../../../context/context";
+import { BuyMenuContext } from "../../../../../../context/context";
 
 function ProductCard({ product }) {
-  const setModalVisible = useContext(OrderModalContext);
-  const setActiveProduct = useContext(ProductContext);
+  const { setActiveProduct, setBuyMenuVisible } = useContext(BuyMenuContext);
 
-  const openModal = () => {
+  const openBuyMenu = () => {
     setActiveProduct(product);
-    setModalVisible(true);
+    setBuyMenuVisible(true);
     return;
   };
 
   return (
-    <div onClick={openModal} className={styles.card}>
+    <div onClick={openBuyMenu} className={styles.card}>
       <div className={styles.cardInfo}>
         <h4>{product.brand}</h4>
         <p>{product.flavour}</p>
