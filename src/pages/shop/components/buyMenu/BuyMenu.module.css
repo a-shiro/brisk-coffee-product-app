@@ -5,6 +5,7 @@
 
   background-color: rgba(0, 0, 0, 0.6);
 
+  -webkit-animation: fade-in 0.4s both ease-out;
   animation: fade-in 0.4s both ease-out;
 }
 
@@ -17,10 +18,13 @@
   top: 50%;
   z-index: 11;
 
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 
   background-color: white;
 
+  -webkit-animation: drop-in 0.4s both ease-out;
   animation: drop-in 0.4s both ease-out;
 }
 
@@ -33,6 +37,8 @@
   width: 100%;
   max-width: 20rem;
   margin: auto;
+
+  -o-object-fit: cover;
 
   object-fit: cover;
 }
@@ -88,11 +94,30 @@
 }
 
 /* Animations */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes fade-in {
   0% {
     opacity: 0;
   }
   100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes drop-in {
+  0% {
+    top: 40%;
+    opacity: 0;
+  }
+  100% {
+    top: 50%;
     opacity: 1;
   }
 }
