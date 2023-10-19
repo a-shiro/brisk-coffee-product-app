@@ -31,6 +31,7 @@
 .imageContainer > img {
   aspect-ratio: 4 / 4;
   width: 100%;
+  max-width: 20rem;
   margin: auto;
 
   object-fit: cover;
@@ -66,7 +67,7 @@
 }
 
 .itemDescription > p {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
 
   color: #424242;
 }
@@ -75,10 +76,6 @@
 @media (min-width: 720px) {
   .modal {
     max-width: 35rem;
-  }
-
-  .imageContainer > img {
-    max-width: 30rem;
   }
 
   .itemDescription {
