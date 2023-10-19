@@ -9,16 +9,16 @@ import { CartContext } from "../../../context/context";
 import styles from "./Cart.module.css";
 
 function Cart() {
-  const { cart, setCartInterfaceVisible } = useContext(CartContext);
+  const { cart, setCartMenuActive } = useContext(CartContext);
 
-  const openCartInterface = () => {
-    setCartInterfaceVisible(true);
+  const openCartMenu = () => {
+    setCartMenuActive(true);
   };
 
   return (
     <div className={styles.cart}>
       {cart.quantity > 0 ? (
-        <button onClick={openCartInterface}>
+        <button onClick={openCartMenu}>
           <span>View cart &nbsp;</span>
           <div className={styles.flexContainer}>
             <img src={cartWhiteIcon} alt="cart-icon" />

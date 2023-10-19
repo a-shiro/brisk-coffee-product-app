@@ -8,6 +8,7 @@
 
   border: none;
 
+  font-size: 0.9rem;
   font-weight: 300;
 
   -webkit-transition: background-color 0.3s, color 0.3s;
@@ -35,11 +36,11 @@
   margin-right: 0.35rem;
 
   -o-object-fit: contain;
-
   object-fit: contain;
 }
 
 .flexContainer.empty > span {
-  display: inline-block;
   margin-right: 0.5rem;
+
+  display: inline-block;
 }
