@@ -1,0 +1,50 @@
+.header {
+  padding-top: 1rem;
+}
+
+.header > h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.checkoutSection {
+  padding: 1rem;
+}
+
+.checkoutHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkoutHeader > h2 {
+  font-weight: 600;
+}
+
+.checkoutHeader > button {
+  border: none;
+
+  font-size: 0.95rem;
+
+  background-color: transparent;
+  color: #7d7268;
+
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media (min-width: 720px) {
+  .header {
+    padding-top: 3rem;
+  }
+
+  .header > h1 {
+    font-size: 1.65rem;
+  }
+}
+
+@media (min-width: 1020px) {
+  .header > h1 {
+    font-size: 2rem;
+  }
+}
