@@ -1,0 +1,10 @@
+/* Media Queries */
+@media (min-width: 720px) {
+  .cardsContainer {
+    padding: 0 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}

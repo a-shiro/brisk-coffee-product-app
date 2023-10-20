@@ -1,0 +1,46 @@
+.cart > button {
+  padding: 0.5rem 1rem;
+  margin-right: 0.25rem;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  border: none;
+
+  font-size: 0.9rem;
+  font-weight: 300;
+
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  -o-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+
+  background-color: #7d7268;
+  color: white;
+
+  cursor: pointer;
+}
+
+.cart > button:hover {
+  background-color: #b1b1b1;
+}
+
+.flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flexContainer > img {
+  width: 1.25rem;
+  margin-right: 0.35rem;
+
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.flexContainer.empty > span {
+  margin-right: 0.5rem;
+
+  display: inline-block;
+}

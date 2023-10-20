@@ -1,0 +1,39 @@
+.header {
+  padding-top: 1rem;
+}
+
+.header > h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.menu {
+  padding: 2rem 0;
+}
+
+/* Media Queries */
+@media (min-width: 720px) {
+  .header {
+    padding-top: 3rem;
+  }
+
+  .header > h1 {
+    font-size: 1.65rem;
+  }
+
+  .menu {
+    padding: 3rem 0;
+  }
+}
+
+@media (min-width: 1020px) {
+  .menu {
+    max-width: 65rem;
+    margin: auto;
+  }
+
+  .header > h1 {
+    font-size: 2rem;
+  }
+}

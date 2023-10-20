@@ -1,0 +1,134 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+
+  background-color: rgba(0, 0, 0, 0.6);
+
+  -webkit-animation: fade-in 0.4s both ease-out;
+  animation: fade-in 0.4s both ease-out;
+}
+
+.modal {
+  width: 95%;
+  max-width: 25rem;
+
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 11;
+
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  background-color: white;
+
+  -webkit-animation: drop-in 0.4s both ease-out;
+  animation: drop-in 0.4s both ease-out;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.imageContainer > img {
+  aspect-ratio: 4 / 4;
+  width: 100%;
+  max-width: 20rem;
+  margin: auto;
+
+  -o-object-fit: cover;
+
+  object-fit: cover;
+}
+
+.imageContainer > button {
+  padding: 0;
+
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  border: none;
+
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.icon {
+  width: 1.5rem;
+}
+
+.itemDescription {
+  padding: 1rem;
+}
+
+.itemDescription > h1 {
+  margin-bottom: 0.5rem;
+
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.itemDescription > p {
+  font-size: 0.75rem;
+
+  color: #424242;
+}
+
+/* Media Queries */
+@media (min-width: 720px) {
+  .modal {
+    max-width: 35rem;
+  }
+
+  .itemDescription {
+    padding: 0.5rem 2rem;
+  }
+
+  .itemDescription > h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Animations */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes drop-in {
+  0% {
+    top: 40%;
+    opacity: 0;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes drop-in {
+  0% {
+    top: 40%;
+    opacity: 0;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
+}

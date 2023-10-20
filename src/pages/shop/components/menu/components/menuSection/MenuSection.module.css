@@ -1,0 +1,16 @@
+.header {
+  padding: 1rem;
+}
+
+.header > h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.header > p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.025rem;
+
+  color: #797979;
+}
