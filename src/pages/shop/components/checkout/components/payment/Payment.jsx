@@ -1,38 +1,48 @@
+// Hooks
+import { useState } from "react";
+// Components
+import PaymentForm from "./components/PaymentForm";
 // CSS
 import styles from "./Payment.module.css";
 
 function Payment() {
-  // click button manages state in component and then changes the parent's state
+  const [componentActive, setComponentActive] = useState(true);
+
+  const [fieldValues, setFieldValues] = useState({
+    firstName: "",
+    lastName: "",
+    cardNumber: "1234 1234 1234 1234",
+    cvc: 123,
+    expirationData: "01 / 28",
+  });
+
+  const edit = () => {
+    setComponentActive(true);
+  };
 
   return (
-    <div className={styles.addressContainer}>
-      <h3>3. Payment</h3>
-      <button>Edit</button>
+    <div className={styles.paymentContainer}>
+      <header className={styles.paymentHeader}>
+        <h3>3. Payment</h3>
+        {!componentActive && <button onClick={edit}>Edit</button>}
+      </header>
 
-      <form>
-        <label>First Name</label>
-        <input />
-
-        <label>Last Name</label>
-        <input />
-
-        <label>Credit/Debit Card Number</label>
-        <input />
-
-        <label>CVC</label>
-        <input />
-
-        <label>Card Expiration</label>
-        <input />
-      </form>
-
-      <div>
-        <p>First Name Last Name</p>
-        <p>Phone</p>
-        <p>Email</p>
-      </div>
-
-      <button>Continue</button>
+      {componentActive ? (
+        <PaymentForm
+          fieldValues={fieldValues}
+          setFieldValues={setFieldValues}
+          setComponentActive={setComponentActive}
+        />
+      ) : (
+        <div className={styles.paymentInfo}>
+          <p>
+            {fieldValues.firstName} {fieldValues.lastName}
+          </p>
+          <p>{fieldValues.cardNumber}</p>
+          <p>{fieldValues.cvc}</p>
+          <p>{fieldValues.expirationData}</p>
+        </div>
+      )}
     </div>
   );
 }

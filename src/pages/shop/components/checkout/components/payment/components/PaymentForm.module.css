@@ -1,0 +1,27 @@
+.paymentForm {
+  margin-top: 0.5rem;
+}
+
+.paymentForm > input {
+  width: 100%;
+  margin: 0.25rem 0 1rem 0;
+  padding: 0.25rem 0.5rem;
+
+  display: block;
+
+  border: 1px solid black;
+  border-radius: 0;
+  outline: none;
+}
+
+.paymentForm > button {
+  width: 100%;
+  margin: 1rem 0 2rem 0;
+  padding: 0.5rem 0.5rem;
+  border: none;
+
+  font-size: 0.95rem;
+
+  background-color: #7d7268;
+  color: white;
+}
