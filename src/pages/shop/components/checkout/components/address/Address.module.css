@@ -1,0 +1,33 @@
+.addressContainer {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.addressHeader {
+  margin-top: 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.addressHeader > h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.addressHeader > button {
+  border: none;
+
+  font-size: 0.95rem;
+  text-decoration: underline;
+
+  background-color: transparent;
+  color: #7d7268;
+
+  cursor: pointer;
+}
+
+.addressInfo {
+  color: #7d7268;
+
+  margin: 0.5rem 0 1rem 0;
+}
