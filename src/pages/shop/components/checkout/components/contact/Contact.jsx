@@ -1,35 +1,46 @@
+// Hooks
+import { useState } from "react";
+// Components
+import ContactForm from "./components/ContactForm";
 // CSS
 import styles from "./Contact.module.css";
 
 function Contact() {
-  // click button manages state in component and then changes the parent's state
+  const [componentActive, setComponentActive] = useState(true);
+
+  const [fieldValues, setFieldValues] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+  });
+
+  const edit = () => {
+    setComponentActive(true);
+  };
 
   return (
-    <div className={styles.addressContainer}>
-      <h3>1. Address</h3>
-      <button>Edit</button>
+    <div className={styles.contactContainer}>
+      <header className={styles.contactHeader}>
+        <h3>2. Contact Information</h3>
+        {!componentActive && <button onClick={edit}>Edit</button>}
+      </header>
 
-      <form>
-        <label>First name</label>
-        <input />
-
-        <label>Last name</label>
-        <input />
-
-        <label>Phone</label>
-        <input />
-
-        <label>Email</label>
-        <input />
-      </form>
-
-      <div>
-        <p>First Name Last Name</p>
-        <p>Phone</p>
-        <p>Email</p>
-      </div>
-
-      <button>Continue</button>
+      {componentActive ? (
+        <ContactForm
+          fieldValues={fieldValues}
+          setFieldValues={setFieldValues}
+          setComponentActive={setComponentActive}
+        />
+      ) : (
+        <div className={styles.contactInfo}>
+          <p>
+            {fieldValues.firstName} {fieldValues.lastName}
+          </p>
+          <p>{fieldValues.phone}</p>
+          <p>{fieldValues.email}</p>
+        </div>
+      )}
     </div>
   );
 }

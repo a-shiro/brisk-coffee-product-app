@@ -1,0 +1,40 @@
+.contactContainer {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.contactHeader {
+  margin-top: 1.5rem;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.contactHeader > h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.contactHeader > button {
+  border: none;
+
+  font-size: 0.95rem;
+  text-decoration: underline;
+
+  background-color: transparent;
+  color: #7d7268;
+
+  cursor: pointer;
+}
+
+.contactInfo {
+  margin: 0.5rem 0 1rem 0;
+
+  overflow: hidden;
+  text-wrap: nowrap;
+
+  color: #7d7268;
+}
