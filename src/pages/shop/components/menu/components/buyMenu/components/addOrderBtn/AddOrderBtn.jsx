@@ -3,7 +3,8 @@ import { useContext } from "react";
 // CSS
 import styles from "./AddOrderBtn.module.css";
 // Context
-import { CartContext, BuyMenuContext } from "../../../../context/context";
+import { BuyMenuContext } from "../../../../context/context";
+import { CartContext } from "../../../../../../context/context";
 
 function AddOrderBtn({ currentQuantity, closeBuyMenu }) {
   const { cart, setCart } = useContext(CartContext);

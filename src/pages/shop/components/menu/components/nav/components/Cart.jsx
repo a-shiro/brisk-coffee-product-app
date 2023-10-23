@@ -4,7 +4,7 @@ import { useContext } from "react";
 import cartIcon from "../../../../../../../resources/icons/shopping-cart.png";
 import cartWhiteIcon from "../../../../../../../resources/icons/shopping-cart-white.png";
 // Context
-import { CartContext } from "../../../context/context";
+import { CartContext } from "../../../../../context/context";
 // CSS
 import styles from "./Cart.module.css";
 

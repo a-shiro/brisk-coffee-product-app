@@ -8,7 +8,7 @@ import styles from "./CartMenu.module.css";
 // Resources
 import closeIcon from "../../../../../../resources/icons/close.png";
 // Context
-import { CartContext } from "../../context/context";
+import { CartContext } from "../../../../context/context";
 
 function CartMenu() {
   const modal = useRef();

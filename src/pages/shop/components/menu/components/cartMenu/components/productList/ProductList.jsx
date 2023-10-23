@@ -3,7 +3,7 @@ import { useContext } from "react";
 // CSS
 import styles from "./ProductList.module.css";
 // Context
-import { CartContext } from "../../../../context/context";
+import { CartContext } from "../../../../../../context/context";
 
 function ProductList() {
   const { cart, setCart } = useContext(CartContext);
