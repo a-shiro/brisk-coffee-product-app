@@ -46,6 +46,12 @@ function ProductList() {
         );
       })}
 
+      {cart.quantity === 0 && (
+        <li className={styles.emptyMessage}>
+          <p>Browse our menu and start adding items to your order</p>
+        </li>
+      )}
+
       <li className={styles.subtotal}>
         <p>Subtotal</p>
         <p>${cart.subtotal.toFixed(2)}</p>

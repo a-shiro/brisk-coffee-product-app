@@ -35,6 +35,18 @@
   color: #424242;
 }
 
+.emptyMessage {
+  justify-content: center !important;
+}
+
+.emptyMessage > p {
+  padding: 1rem 0;
+
+  font-size: 0.95rem;
+
+  color: #7d7268;
+}
+
 .subtotal {
   display: -webkit-box;
   display: -ms-flexbox;
