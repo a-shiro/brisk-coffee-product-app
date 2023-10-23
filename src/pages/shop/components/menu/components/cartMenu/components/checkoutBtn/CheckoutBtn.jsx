@@ -3,14 +3,21 @@ import { useContext } from "react";
 // CSS
 import styles from "./CheckoutBtn.module.css";
 // Context
-import { CheckoutContext } from "../../../../../../context/context";
+import {
+  CartContext,
+  CheckoutContext,
+} from "../../../../../../context/context";
 
 function CheckoutBtn({ closeCartMenu }) {
   const { setCheckoutActive } = useContext(CheckoutContext);
+  const { cart } = useContext(CartContext);
 
   const openCheckout = () => {
-    closeCartMenu();
+    if (cart.quantity === 0) {
+      return closeCartMenu();
+    }
 
+    closeCartMenu();
     return setCheckoutActive(true);
   };
 
