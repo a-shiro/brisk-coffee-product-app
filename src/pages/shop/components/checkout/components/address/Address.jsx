@@ -1,9 +1,11 @@
-// CSS
+// Hooks
 import { useState } from "react";
-import styles from "./Address.module.css";
+// Components
 import AddressForm from "./components/AddressForm";
+// CSS
+import styles from "./Address.module.css";
 
-function Address() {
+function Address({ setContactFormActive, setPlaceOrderActive }) {
   const [componentActive, setComponentActive] = useState(true);
 
   const [fieldValues, setFieldValues] = useState({
@@ -15,6 +17,8 @@ function Address() {
 
   const edit = () => {
     setComponentActive(true);
+    setContactFormActive(false);
+    setPlaceOrderActive(false);
   };
 
   return (
@@ -29,6 +33,7 @@ function Address() {
           fieldValues={fieldValues}
           setFieldValues={setFieldValues}
           setComponentActive={setComponentActive}
+          setContactFormActive={setContactFormActive}
         />
       ) : (
         <div className={styles.addressInfo}>

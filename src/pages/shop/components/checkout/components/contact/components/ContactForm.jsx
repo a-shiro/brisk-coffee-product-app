@@ -1,7 +1,13 @@
 // CSS
 import styles from "./ContactForm.module.css";
 
-function ContactForm({ fieldValues, setFieldValues, setComponentActive }) {
+function ContactForm({
+  fieldValues,
+  setFieldValues,
+  setComponentWasActive,
+  setContactFormActive,
+  setPaymentFormActive,
+}) {
   const changeHandler = (e) => {
     setFieldValues((prev) => ({
       ...prev,
@@ -12,7 +18,9 @@ function ContactForm({ fieldValues, setFieldValues, setComponentActive }) {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    setComponentActive(false);
+    setContactFormActive(false);
+    setComponentWasActive(true);
+    setPaymentFormActive(true);
   };
 
   return (

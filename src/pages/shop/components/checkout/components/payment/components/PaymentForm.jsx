@@ -1,7 +1,13 @@
 // CSS
 import styles from "./PaymentForm.module.css";
 
-function PaymentForm({ fieldValues, setFieldValues, setComponentActive }) {
+function PaymentForm({
+  fieldValues,
+  setFieldValues,
+  setComponentWasActive,
+  setPaymentFormActive,
+  setPlaceOrderActive,
+}) {
   const changeHandler = (e) => {
     setFieldValues((prev) => ({
       ...prev,
@@ -12,7 +18,9 @@ function PaymentForm({ fieldValues, setFieldValues, setComponentActive }) {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    setComponentActive(false);
+    setPaymentFormActive(false);
+    setComponentWasActive(true);
+    setPlaceOrderActive(true);
   };
 
   return (

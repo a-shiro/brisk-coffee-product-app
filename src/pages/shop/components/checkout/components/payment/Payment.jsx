@@ -5,8 +5,12 @@ import PaymentForm from "./components/PaymentForm";
 // CSS
 import styles from "./Payment.module.css";
 
-function Payment() {
-  const [componentActive, setComponentActive] = useState(true);
+function Payment({
+  paymentFormActive,
+  setPaymentFormActive,
+  setPlaceOrderActive,
+}) {
+  const [componentWasActive, setComponentWasActive] = useState(false);
 
   const [fieldValues, setFieldValues] = useState({
     firstName: "",
@@ -17,21 +21,26 @@ function Payment() {
   });
 
   const edit = () => {
-    setComponentActive(true);
+    setPaymentFormActive(true);
+    setPlaceOrderActive(false);
   };
 
   return (
     <div className={styles.paymentContainer}>
       <header className={styles.paymentHeader}>
         <h3>3. Payment</h3>
-        {!componentActive && <button onClick={edit}>Edit</button>}
+        {!paymentFormActive && componentWasActive && (
+          <button onClick={edit}>Edit</button>
+        )}
       </header>
 
-      {componentActive ? (
+      {paymentFormActive ? (
         <PaymentForm
           fieldValues={fieldValues}
           setFieldValues={setFieldValues}
-          setComponentActive={setComponentActive}
+          setComponentWasActive={setComponentWasActive}
+          setPaymentFormActive={setPaymentFormActive}
+          setPlaceOrderActive={setPlaceOrderActive}
         />
       ) : (
         <div className={styles.paymentInfo}>

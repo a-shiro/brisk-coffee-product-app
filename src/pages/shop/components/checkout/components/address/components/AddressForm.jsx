@@ -1,7 +1,12 @@
 // CSS
 import styles from "./AddressForm.module.css";
 
-function AddressForm({ fieldValues, setFieldValues, setComponentActive }) {
+function AddressForm({
+  fieldValues,
+  setFieldValues,
+  setComponentActive,
+  setContactFormActive,
+}) {
   const changeHandler = (e) => {
     setFieldValues((prev) => ({
       ...prev,
@@ -13,6 +18,7 @@ function AddressForm({ fieldValues, setFieldValues, setComponentActive }) {
     e.preventDefault();
 
     setComponentActive(false);
+    setContactFormActive(true);
   };
 
   return (
