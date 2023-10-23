@@ -3,8 +3,6 @@
 }
 
 .addressHeader {
-  margin-top: 1.5rem;
-
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,7 +29,10 @@
 }
 
 .addressInfo {
-  color: #7d7268;
-
   margin: 0.5rem 0 1rem 0;
+
+  overflow: hidden;
+  text-wrap: nowrap;
+
+  color: #7d7268;
 }

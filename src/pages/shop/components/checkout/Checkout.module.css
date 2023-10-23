@@ -1,5 +1,5 @@
 .header {
-  padding-top: 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 
 .header > h1 {
@@ -8,20 +8,22 @@
   text-align: center;
 }
 
-.checkoutSection {
-  padding: 1rem;
-}
+.header > div {
+  margin-top: 1rem;
 
-.checkoutHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-.checkoutHeader > h2 {
+.header > div > h2 {
   font-weight: 600;
 }
 
-.checkoutHeader > button {
+.header > div > button {
   border: none;
 
   font-size: 0.95rem;
@@ -32,8 +34,18 @@
   cursor: pointer;
 }
 
+.section {
+  padding: 1rem;
+}
+
 /* Media Queries */
 @media (min-width: 720px) {
+  .section,
+  .header {
+    max-width: 50rem;
+    margin: auto;
+  }
+
   .header {
     padding-top: 3rem;
   }
@@ -41,10 +53,43 @@
   .header > h1 {
     font-size: 1.65rem;
   }
+
+  .section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .section > div {
+    width: 48%;
+  }
 }
 
 @media (min-width: 1020px) {
+  .section,
+  .header {
+    max-width: 65rem;
+  }
+
   .header > h1 {
+    margin-bottom: 2rem;
+
     font-size: 2rem;
+  }
+
+  .header {
+    margin: 2rem auto;
+
+    font-size: 1.25rem;
+  }
+  .section {
+    margin: auto;
+  }
+
+  .section > div {
+    width: 55%;
   }
 }
