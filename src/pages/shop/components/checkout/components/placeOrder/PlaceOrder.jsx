@@ -1,16 +1,21 @@
 // CSS
 import styles from "./PlaceOrder.module.css";
 
-function PlaceOrder() {
-  // click button manages state in component and then changes the parent's state
+function PlaceOrder({ placeOrderActive, setPurchaseModalActive }) {
+  const submitOrder = () => {
+    setPurchaseModalActive(true);
+  };
 
   return (
-    <div className={styles.addressContainer}>
+    <div className={styles.placeOrderContainer}>
       <h3>4. Review and Place Order</h3>
 
-      <p>Please review the details above and place the order.</p>
-
-      <button>Submit Order</button>
+      {placeOrderActive && (
+        <>
+          <p>Please review the details above and place the order.</p>
+          <button onClick={submitOrder}>Submit Order</button>
+        </>
+      )}
     </div>
   );
 }
