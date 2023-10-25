@@ -1,7 +1,7 @@
 // Hooks
 import { useState } from "react";
 // Components
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import MessageForm from "./components/form/Form";
 import Modal from "./components/modal/Modal";

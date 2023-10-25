@@ -1,4 +1,5 @@
 // Components
+import { HelmetProvider } from "react-helmet-async";
 import { Route, Routes } from "react-router-dom";
 import Home from "../pages/home/Home";
 import Shop from "../pages/shop/Shop";
@@ -8,13 +9,15 @@ import NotFound from "../pages/notFound/NotFound";
 
 function RoutesManager() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/order-online" element={<Shop />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <HelmetProvider>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/order-online" element={<Shop />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </HelmetProvider>
   );
 }
 

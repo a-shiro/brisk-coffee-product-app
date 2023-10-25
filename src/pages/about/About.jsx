@@ -1,5 +1,5 @@
 // Components
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 // CSS
 import styles from "./About.module.css";
 // Static Files

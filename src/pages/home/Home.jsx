@@ -1,5 +1,5 @@
 // Components
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Hero from "./components/hero/Hero";
 import Showcase from "./components/showcase/Showcase";
 import Paralax from "./components/paralax/Paralax";

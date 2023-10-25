@@ -1,11 +1,11 @@
 // Hooks
 import { useState } from "react";
 // Components
+import { Helmet } from "react-helmet-async";
 import Checkout from "./components/checkout/Checkout";
 import Menu from "./components/menu/Menu";
 // Context
 import { CheckoutContext, CartContext } from "./context/context";
-import { Helmet } from "react-helmet";
 
 function Store() {
   const [checkoutActive, setCheckoutActive] = useState();

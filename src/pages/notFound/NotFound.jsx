@@ -1,5 +1,5 @@
 // Components
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 // CSS
 import styles from "./NotFound.module.css";
