@@ -17,6 +17,8 @@ function CheckoutBtn({ closeCartMenu }) {
       return closeCartMenu();
     }
 
+    window.scrollTo({ top: 0 });
+
     closeCartMenu();
     return setCheckoutActive(true);
   };
