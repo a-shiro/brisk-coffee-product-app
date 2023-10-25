@@ -1,4 +1,5 @@
 // Components
+import { Helmet } from "react-helmet";
 import Hero from "./components/hero/Hero";
 import Showcase from "./components/showcase/Showcase";
 import Paralax from "./components/paralax/Paralax";
@@ -10,6 +11,10 @@ import background2 from "../../resources/images/cans_background_2.jpg";
 function Home() {
   return (
     <>
+      <Helmet>
+        <title>Brisk - Home</title>
+      </Helmet>
+
       <Hero />
       <Showcase />
       <Paralax image={background1} />
