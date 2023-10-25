@@ -18,7 +18,9 @@ function PurchaseModal({ setPurchaseModalActive }) {
   };
 
   return (
-    <div className={styles.modalOverlay}>
+    <>
+      <div onClick={close} className={styles.modalOverlay}></div>
+
       <div className={styles.modal}>
         <img src={tick} className={styles.tick} alt="tick" />
 
@@ -27,7 +29,7 @@ function PurchaseModal({ setPurchaseModalActive }) {
 
         <button onClick={close}>Close</button>
       </div>
-    </div>
+    </>
   );
 }
 
