@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import Checkout from "./components/checkout/Checkout";
 import Menu from "./components/menu/Menu";
+import FadingOverlay from "../../components/common/fadingOverlay/FadingOverlay";
 // Context
 import { CheckoutContext, CartContext } from "./context/context";
 
@@ -26,6 +27,8 @@ function Store() {
           {checkoutActive ? <Checkout /> : <Menu />}
         </CartContext.Provider>
       </CheckoutContext.Provider>
+
+      <FadingOverlay />
     </>
   );
 }

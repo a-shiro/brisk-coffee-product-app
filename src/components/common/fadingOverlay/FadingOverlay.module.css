@@ -1,0 +1,26 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+
+  visibility: visible;
+  opacity: 1;
+
+  background-color: white;
+
+  animation: fade 1.5s ease-in-out forwards;
+}
+
+/* Animations */
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

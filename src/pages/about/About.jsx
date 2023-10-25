@@ -1,5 +1,6 @@
 // Components
 import { Helmet } from "react-helmet-async";
+import FadingOverlay from "../../components/common/fadingOverlay/FadingOverlay";
 // CSS
 import styles from "./About.module.css";
 // Static Files
@@ -73,6 +74,8 @@ function About() {
           </div>
         </section>
       </section>
+
+      <FadingOverlay />
     </>
   );
 }

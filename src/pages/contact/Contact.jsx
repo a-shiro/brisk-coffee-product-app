@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import MessageForm from "./components/form/Form";
 import Modal from "./components/modal/Modal";
 import Map from "./components/map/Map";
+import FadingOverlay from "../../components/common/fadingOverlay/FadingOverlay";
 // CSS
 import styles from "./Contact.module.css";
 // Static Files
@@ -61,6 +62,8 @@ function Contact() {
           <Map />
         </section>
       </section>
+
+      <FadingOverlay />
     </>
   );
 }
