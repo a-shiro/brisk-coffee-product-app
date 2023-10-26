@@ -38,6 +38,16 @@
   width: 2.5rem;
 }
 
+.contributors {
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+.contributors a {
+  text-decoration: underline;
+  font-weight: 400;
+}
+
 .copyright {
   font-weight: 300;
 }

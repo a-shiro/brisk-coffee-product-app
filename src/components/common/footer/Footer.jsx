@@ -1,4 +1,5 @@
 // Components
+import { Link } from "react-router-dom";
 import NewsletterForm from "./components/newsletterForm/NewsletterForm";
 import NewsletterModal from "./components/newsletterModal/NewsletterModal";
 // Hooks
@@ -33,6 +34,18 @@ function Footer() {
             <img src={facebookIcon} alt="facebook" />
           </li>
         </ul>
+
+        <div className={styles.contributors}>
+          <p>
+            Digital Art by:{" "}
+            <Link to="https://linktr.ee/palahanski">Luchezar Palahanski</Link>
+          </p>
+
+          <p>
+            Code by: <Link to="https://github.com/a-shiro">Alek Mitov</Link>
+          </p>
+        </div>
+
         <p className={styles.copyright}>Copyright &copy; Brisk 2023</p>
       </div>
     </footer>
